@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+</head>
+
+<style type="text/css">
+    body {
+        font-family: 'Roboto';
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        max-width: 1000px;
+        height: 100%;
+        border-radius: 1em 1em 1em 1em;
+        color: white;
+        background-color: midnightblue;
+    }
+
+    .card__picture img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 1em 1em 0 0;
+    }
+
+    .card span {
+        color: rebeccapurple;
+    }
+
+    .card__content {
+        width: 100%;
+    }
+
+    .card__content--header h1 {
+        font-weight: 900;
+        word-spacing: 0.05em;
+        letter-spacing: 0.01em;
+        font-size: 2.5em;
+        text-align: center;
+    }
+
+    .card__content--header p {
+        word-spacing: 0.2em;
+    }
+
+    .card__content--details div {
+        display: flex;
+        flex-direction: column;
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
+
+    .card__content--details p {
+        margin: 0px;
+    }
+
+    .card__content--details h1 {
+        margin: 0px;
+    }
+
+    @media screen and (min-width:800px) {
+        .card {
+            display: flex;
+            flex-direction: row-reverse;
+            height: 400px;
+            text-align: left;
+        }
+
+        .card__content {
+            width: 50%;
+        }
+
+        .card__picture {
+            width: 50%;
+            height: 100%;
+        }
+
+        .card__picture img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            overflow: hidden;
+            border-radius: 0 1em 1em 0;
+        }
+
+        .card__content {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            height: 100%;
+            padding-left: 3em;
+            padding-right: 3em;
+        }
+
+        .card__content--header {
+            background-color: red;
+            flex-basis: 66.66%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .card__content--header h1 {
+            text-align: left;
+        }
+
+        .card__content--details {
+            background-color: aquamarine;
+            flex-basis: 33.33%;
+            display: flex;
+            align-items: center;
+
+        }
+
+        .card__content--details div {
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            flex-basis: 33.33%;
+        }
+
+
+    }
+</style>
+
+<body style="padding: 2em; min-height: 100vh;">
+    <div class="card">
+        <picture class="card__picture">
+            <source media="(min-width: 800px)" srcset="./image-header-desktop.jpg">
+            <img src="./image-header-mobile.jpg" alt="header image">
+        </picture>
+        <!--         <div class="card__picture"><p>100</p></div> -->
+        <div class="card__content">
+            <div class="card__content--header">
+                <h1>Get <span>insights</span> that help your business grow.</h1>
+                <p>Discover the benefits of data analytics and make better decisions regarding revenue, customer
+                    experience, and overall efficiency.</p>
+            </div>
+            <div class="card__content--details">
+                <div>
+                    <h1>10k+</h1>
+                    <p>companies</p>
+                </div>
+                <div>
+                    <h1>314</h1>
+                    <p>templates</p>
+                </div>
+                <div>
+                    <h1>12M+</h1>
+                    <p>queries</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
